@@ -1,46 +1,75 @@
-# Astro Starter Kit: Basics
+# 🚀 Portafolio Web - Malvavysco
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Mi portafolio web personal enfocado en desarrollo **Full-Stack**, construido con **Astro** para un rendimiento óptimo de carga, estilizado con **Tailwind CSS** e impulsado con animaciones interactivas en **HTML5 Canvas**.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## ✨ Características Principales
 
-```text
+* ⚡ **Rendimiento Ultrarrápido:** Arquitectura orientada a islas impulsada por Astro.
+* 🌌 **Fondo Interactivo Cyberpunk:** Rejilla hexagonal animada en 2D renderizada mediante la GPU con `<canvas>` y JavaScript.
+* 💈 **UI / UX Neón:** Diseño de interfaz moderno con barras láser animadas, degradados dinámicos y adaptación responsiva.
+* 🛠️ **Secciones Integradas:** Muestra de proyectos, stack de habilidades técnicas, certificaciones y formulario de contacto.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+* **Framework:** [Astro](https://astro.build/)
+* **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Animaciones:** HTML5 Canvas API + Vanilla JavaScript
+* **Despliegue:** Vercel / Netlify
+
+---
+
+## 🚀 Instalación y Desarrollo Local
+
+Si deseas clonar y probar este proyecto localmente en tu máquina:
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone [https://github.com/malvavysco/TU-REPOSITORIO.git](https://github.com/malvavysco/TU-REPOSITORIO.git)
+Accede al directorio:
+
+Bash
+cd my-landing-page
+Instala las dependencias:
+
+Bash
+npm install
+Inicia el servidor de desarrollo:
+
+Bash
+npm run dev
+Abre http://localhost:4321 en tu navegador para ver el resultado en vivo.
+
+📂 Estructura del Proyecto
+Plaintext
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── public/              # Archivos estáticos e imágenes de proyectos
+├── src/
+│   ├── components/      # Componentes UI (Header, Hero, Canvas, Footer, etc.)
+│   ├── layouts/         # Plantillas base (Layout.astro)
+│   ├── pages/           # Rutas y páginas principales (index.astro)
+│   └── styles/          # Estilos globales CSS e integración con Tailwind
 └── package.json
-```
+👤 Desarrollado por Malvavysco
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+GitHub: @malvavysco
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Pasos para subirlo a GitHub:
 
-## 👀 Want to learn more?
+Una vez guardado el archivo `README.md`:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+git add README.md
+git commit -m "docs: agregar README detallado del portafolio"
+git push
