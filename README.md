@@ -33,7 +33,7 @@ Si deseas clonar y probar este proyecto localmente en tu máquina:
 
 1. **Clona el repositorio:**
 ```bash
-   git clone [https://github.com/malvavysco/TU-REPOSITORIO.git](https://github.com/malvavysco/TU-REPOSITORIO.git)
+git clone [https://github.com/malvavysco/TU-REPOSITORIO.git](https://github.com/malvavysco/TU-REPOSITORIO.git)
 Accede al directorio:
 
 
