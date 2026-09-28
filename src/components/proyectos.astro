@@ -1,12 +1,13 @@
 ---
+
 const proyectos = [
   {
     titulo: "Calculadora de Finiquito Laboral",
     descripcion: "Sistema automatizado para despacho jurídico que procesa cálculos de finiquitos en Excel mediante PHP Spreadsheet y envía reportes personalizados por correo.",
     tags: ["PHP", "WordPress", "WooCommerce", "Excel API"],
-    linkDemo: "#",
+    linkDemo: "https://castroavila.com",
     linkGithub: "https://castroavila.com",
-    imagen: "/public/images/finiquito.png",
+    imagen: "/Images/finiquito.png",
   },
   {
     titulo: "Uber Maximizer",
@@ -14,15 +15,15 @@ const proyectos = [
     tags: ["Vue.js", "JavaScript", "Tailwind CSS", "Leaflet.js", "Django"],
     linkDemo: "#",
     linkGithub: "https://github.com/malkavianikkaku-gif/uber-maximizer",
-    imagen: "/public/images/uber-maximizer.png",
+    imagen: "/Images/uber-maximizer.png",
   },
   {
     titulo: "SaaS Gestión e Inventario (Clone Aspel)",
     descripcion: "Plataforma web para control de inventarios, procesamiento de XMLs, facturación e integración con pasarela de pagos Stripe y autenticación JWT.",
     tags: ["Vue.js", "Django", "PostgreSQL", "Stripe API"],
-    linkDemo: "#",
+    linkDemo: "https://aspel-clone-saas-s4qn.vercel.app/",
     linkGithub: "https://github.com/malkavianikkaku-gif/aspel-clone-saas",
-    imagen: "/public/images/saas-inventario.png",
+    imagen: "/Images/saas-inventario.png",
   }
 ];
 ---
@@ -44,7 +45,7 @@ const proyectos = [
               <img 
                 src={proyecto.imagen} 
                 alt={proyecto.titulo} 
-                class="w-full h-full object-cover hover:scale-105 trasintion-trasform duration-300"
+                class="w-full h-full object-cover hover:scale-105 trasintion-trasform duration-300 loading-lazy"
               />
             </div>
           )}
