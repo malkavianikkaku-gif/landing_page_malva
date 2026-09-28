@@ -36,21 +36,21 @@ Si deseas clonar y probar este proyecto localmente en tu máquina:
    git clone [https://github.com/malvavysco/TU-REPOSITORIO.git](https://github.com/malvavysco/TU-REPOSITORIO.git)
 Accede al directorio:
 
-Bash
+
 cd my-landing-page
 Instala las dependencias:
 
-Bash
+
 npm install
 Inicia el servidor de desarrollo:
 
-Bash
+
 npm run dev
 Abre http://localhost:4321 en tu navegador para ver el resultado en vivo.
 
 📂 Estructura del Proyecto
-Plaintext
-/
+
+El proyecto está estructurado de la siguiente manera:/
 ├── public/              # Archivos estáticos e imágenes de proyectos
 ├── src/
 │   ├── components/      # Componentes UI (Header, Hero, Canvas, Footer, etc.)
@@ -58,18 +58,6 @@ Plaintext
 │   ├── pages/           # Rutas y páginas principales (index.astro)
 │   └── styles/          # Estilos globales CSS e integración con Tailwind
 └── package.json
-👤 Desarrollado por Malvavysco
-
-GitHub: @malvavysco
 
 
 ---
-
-### Pasos para subirlo a GitHub:
-
-Una vez guardado el archivo `README.md`:
-
-```bash
-git add README.md
-git commit -m "docs: agregar README detallado del portafolio"
-git push
