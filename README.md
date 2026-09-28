@@ -49,8 +49,7 @@ npm run dev
 Abre http://localhost:4321 en tu navegador para ver el resultado en vivo.
 
 📂 Estructura del Proyecto
-
-El proyecto está estructurado de la siguiente manera:/
+/
 ├── public/              # Archivos estáticos e imágenes de proyectos
 ├── src/
 │   ├── components/      # Componentes UI (Header, Hero, Canvas, Footer, etc.)
@@ -58,6 +57,4 @@ El proyecto está estructurado de la siguiente manera:/
 │   ├── pages/           # Rutas y páginas principales (index.astro)
 │   └── styles/          # Estilos globales CSS e integración con Tailwind
 └── package.json
-
-
 ---
