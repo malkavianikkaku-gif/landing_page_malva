@@ -32,7 +32,7 @@ Mi portafolio web personal enfocado en desarrollo **Full-Stack**, construido con
 Si deseas clonar y probar este proyecto localmente en tu máquina:
 
 1. **Clona el repositorio:**
-   ```bash
+```bash
    git clone [https://github.com/malvavysco/TU-REPOSITORIO.git](https://github.com/malvavysco/TU-REPOSITORIO.git)
 Accede al directorio:
 
