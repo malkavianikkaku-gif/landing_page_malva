@@ -1,0 +1,108 @@
+---
+---
+<canvas id="bg-canvas" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
+
+<script>
+  const canvas = document.getElementById('bg-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d');
+
+  if (ctx) {
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      initHexagons();
+    });
+
+    // Configuración del panal hexagonal
+    const hexRadius = 35; // Tamaño de cada hexágono
+    const hexWidth = Math.sqrt(3) * hexRadius;
+    const hexHeight = 2 * hexRadius;
+
+    interface Hexagon {
+      x: number;
+      y: number;
+      alpha: number;
+      maxAlpha: number;
+      speed: number;
+      color: string;
+    }
+
+    let hexagons: Hexagon[] = [];
+
+    function initHexagons() {
+      hexagons = [];
+      const cols = Math.ceil(width / hexWidth) + 1;
+      const rows = Math.ceil(height / (hexHeight * 0.75)) + 1;
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          let x = c * hexWidth;
+          let y = r * hexHeight * 0.75;
+
+          // Desplazamiento para encajar filas alternadas en panal
+          if (r % 2 !== 0) {
+            x += hexWidth / 2;
+          }
+
+          hexagons.push({
+            x,
+            y,
+            alpha: Math.random() * 0.15,
+            maxAlpha: Math.random() * 0.35 + 0.1,
+            speed: Math.random() * 0.005 + 0.002,
+            color: Math.random() > 0.5 ? '139, 92, 246' : '59, 130, 246' // Morado o Azul
+          });
+        }
+      }
+    }
+
+    function drawHexagon(x: number, y: number, radius: number, strokeColor: string, fillColor?: string) {
+      if (!ctx) return;
+      ctx.beginPath();
+      for (let i = 0; i < 6; i++) {
+        const angle = (Math.PI / 3) * i;
+        const hx = x + radius * Math.cos(angle);
+        const hy = y + radius * Math.sin(angle);
+        if (i === 0) ctx.moveTo(hx, hy);
+        else ctx.lineTo(hx, hy);
+      }
+      ctx.closePath();
+
+      if (fillColor) {
+        ctx.fillStyle = fillColor;
+        ctx.fill();
+      }
+
+      ctx.strokeStyle = strokeColor;
+      ctx.lineWidth = 0.8;
+      ctx.stroke();
+    }
+
+    initHexagons();
+
+    function animate() {
+      if (!ctx) return;
+      ctx.clearRect(0, 0, width, height);
+
+      hexagons.forEach((hex) => {
+        // Efecto de respiración / destello neón
+        hex.alpha += hex.speed;
+        if (hex.alpha > hex.maxAlpha || hex.alpha < 0.03) {
+          hex.speed = -hex.speed;
+        }
+
+        const strokeColor = `rgba(${hex.color}, ${hex.alpha + 0.05})`;
+        const fillColor = `rgba(${hex.color}, ${hex.alpha * 0.15})`;
+
+        drawHexagon(hex.x, hex.y, hexRadius, strokeColor, fillColor);
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+</script>

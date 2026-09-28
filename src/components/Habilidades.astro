@@ -1,0 +1,57 @@
+---
+const categoriasSkills = [
+  {
+    categoria: "Frontend",
+    descripcion: "Construcción de interfaces interactivas, reactivas y 100% adaptativas.",
+    skills: ["Vue.js", "React", "JavaScript (ES6+)", "HTML5 / CSS3", "Tailwind CSS", "Astro"]
+  },
+  {
+    categoria: "Backend & APIs",
+    descripcion: "Lógica de negocio, consumo e integración de servicios y arquitectura REST.",
+    skills: ["Python", "Django", "Node.js", "PHP", "C#", "Java", "Stripe API", "JWT Auth"]
+  },
+  {
+    categoria: "Bases de Datos & DevOps",
+    descripcion: "Almacenamiento estructurado, consultas y despliegue de infraestructura.",
+    skills: ["PostgreSQL", "MySQL", "Render", "Git & GitHub", "REST APIs"]
+  },
+  {
+    categoria: "Multimedia, 3D & Lógica",
+    descripcion: "Herramientas de diseño, modelado, desarrollo de videojuegos y lógica.",
+    skills: ["Roblox Studio (Lua)", "Unity", "Blender", "DaVinci Resolve", "GIMP / Inkscape"]
+  }
+];
+---
+
+<section id="habilidades" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="mb-12 text-center md:text-left">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">
+      Habilidades & <span class="text-brand-purple">Tecnologías</span>
+    </h2>
+    <p class="text-gray-400 max-w-2xl">
+      Stack tecnológico enfocado en resolver problemas reales, desde el diseño de la interfaz hasta el backend y despliegue.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {categoriasSkills.map((cat) => (
+      <div class="bg-brand-card/60 border border-white/10 hover:border-brand-purple/40 rounded-xl p-6 transition-all duration-300">
+        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-purple inline-block"></span>
+          {cat.categoria}
+        </h3>
+        <p class="text-gray-400 text-sm mb-5 leading-relaxed">
+          {cat.descripcion}
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          {cat.skills.map((skill) => (
+            <span class="text-xs px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 font-medium hover:border-brand-purple/50 hover:bg-brand-purple/10 transition-colors">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

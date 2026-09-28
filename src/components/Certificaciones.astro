@@ -1,0 +1,112 @@
+---
+const certificaciones = [
+  {
+    titulo: "Responsive Web Design",
+    emisor: "freeCodeCamp",
+    fecha: "Septiembre 2026",
+    credentialId: "malvavysco-rwdv9",
+    url: "https://freecodecamp.org/certification/malvavysco/responsive-web-design-v9",
+    tags: ["HTML5", "CSS3", "Responsive Design"]
+  },
+  {
+    titulo: "Python",
+    emisor: "freeCodeCamp",
+    fecha: "Septiembre 2026",
+    credentialId: "malvavysco-pyv9",
+    url: "https://freecodecamp.org/certification/malvavysco/python-v9",
+    tags: ["Python", "Data Structures", "Algorithms"]
+  },
+  {
+    titulo: "C# Fundamentals",
+    emisor: "Coddy",
+    fecha: "Agosto 2026",
+    credentialId: "ov7QBb-csharp-dAHyUu",
+    url: "https://coddy.tech/certifications/es/ov7QBb-csharp-dAHyUu",
+    tags: ["C#", ".NET Logic", "Programming"]
+  },
+  {
+    titulo: "Python Object Oriented Programming",
+    emisor: "Coddy",
+    fecha: "Agosto 2026",
+    credentialId: "ov7QBb-python-XwYOnQ",
+    url: "https://coddy.tech/certifications/es/ov7QBb-python-XwYOnQ",
+    tags: ["POO", "Classes & Methods", "Python"]
+  },
+  {
+    titulo: "Python Logic & Flow",
+    emisor: "Coddy",
+    fecha: "Julio 2026",
+    credentialId: "ov7QBb-python-C8rIxh",
+    url: "https://coddy.tech/certifications/es/ov7QBb-python-C8r1xh",
+    tags: ["Logic", "Flow Control", "Algorithms"]
+  },
+  {
+    titulo: "Python Fundamentals",
+    emisor: "Coddy",
+    fecha: "Junio 2026",
+    credentialId: "ov7QBb-python-ZP9neU",
+    url: "https://coddy.tech/certifications/es/ov7QBb-python-ZP9neU",
+    tags: ["Python Syntax", "Data Types", "Basics"]
+  }
+];
+---
+
+<section id="certificaciones" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">
+      Licencias & <span class="text-brand-purple">Certificaciones</span>
+    </h2>
+    <p class="text-gray-400">
+      Cursos, certificaciones verificadas y formación continua que respaldan mis habilidades técnicas.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {certificaciones.map((cert) => (
+      <div class="bg-brand-card/60 border border-white/10 hover:border-brand-purple/50 rounded-xl p-6 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-purple/20 text-brand-purple border border-brand-purple/30">
+              {cert.emisor}
+            </span>
+            <span class="text-xs text-gray-400">{cert.fecha}</span>
+          </div>
+
+          <h3 class="text-lg font-bold text-white mb-2 leading-snug">
+            {cert.titulo}
+          </h3>
+
+          <p class="text-xs text-gray-400 mb-4 font-mono break-all">
+            ID: {cert.credentialId}
+          </p>
+
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            {cert.tags.map((tag) => (
+              <span class="text-[11px] px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/10">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {cert.url !== "#" ? (
+          <a
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs text-brand-blue hover:underline font-medium flex items-center gap-1.5 pt-3 border-t border-white/5"
+          >
+            <span>Mostrar credencial</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 2 00-2 2v10a2 2 002 2h10a2 2 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        ) : (
+          <div class="pt-3 border-t border-white/5 text-xs text-gray-500">
+            Credencial verificada
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</section>

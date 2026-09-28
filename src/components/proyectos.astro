@@ -1,0 +1,88 @@
+---
+const proyectos = [
+  {
+    titulo: "Calculadora de Finiquito Laboral",
+    descripcion: "Sistema automatizado para despacho jurídico que procesa cálculos de finiquitos en Excel mediante PHP Spreadsheet y envía reportes personalizados por correo.",
+    tags: ["PHP", "WordPress", "WooCommerce", "Excel API"],
+    linkDemo: "#",
+    linkGithub: "https://castroavila.com",
+    imagen: "/src/assets/images/proyectos/finiquito.png",
+  },
+  {
+    titulo: "Uber Maximizer",
+    descripcion: "Calculadora de viajes y punto de equilibrio para conductores de plataformas (Uber, DiDi, InDrive) con análisis de ganancias netas y desgaste vehicular y mapa de ubicación y reporte de calles dañadas o complicadas para el vehículo.",
+    tags: ["Vue.js", "JavaScript", "Tailwind CSS", "Leaflet.js", "Django"],
+    linkDemo: "#",
+    linkGithub: "https://github.com/malkavianikkaku-gif/uber-maximizer",
+    imagen: "/src/assets/images/proyectos/uber-maximizer.png",
+  },
+  {
+    titulo: "SaaS Gestión e Inventario (Clone Aspel)",
+    descripcion: "Plataforma web para control de inventarios, procesamiento de XMLs, facturación e integración con pasarela de pagos Stripe y autenticación JWT.",
+    tags: ["Vue.js", "Django", "PostgreSQL", "Stripe API"],
+    linkDemo: "#",
+    linkGithub: "https://github.com/malkavianikkaku-gif/aspel-clone-saas",
+    imagen: "/src/assets/images/proyectos/saas-inventario.png",
+  }
+];
+---
+
+<section id="proyectos" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">
+      Proyectos <span class="text-brand-purple">Destacados</span>
+    </h2>
+    <p class="text-gray-400">Una selección de las aplicaciones web y herramientas que he construido.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {proyectos.map((proyecto) => (
+      <article class="bg-brand-card/60 border border-white/10 hover:border-brand-purple/50 rounded-xl p-6 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+        <div>
+          {proyecto.imagen && (
+            <div class="w-full h-48 overflow-hidden bg-black/20">
+              <img 
+                src={proyecto.imagen} 
+                alt={proyecto.titulo} 
+                class="w-full h-full object-cover hover:scale-105 trasintion-trasform duration-300"
+              />
+            </div>
+          )}
+          <h3 class="text-xl font-bold text-white mb-2">{proyecto.titulo}</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+            {proyecto.descripcion}
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-6">
+            {proyecto.tags.map((tag) => (
+              <span class="text-xs px-2.5 py-1 rounded-md bg-brand-purple/10 text-brand-purple border border-brand-purple/20 font-medium">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+          <a 
+            href={proyecto.linkGithub} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-xs text-gray-300 hover:text-white flex items-center gap-1 font-medium transition-colors"
+          >
+            <span>Code / GitHub</span> →
+          </a>
+          {proyecto.linkDemo !== "#" && (
+            <a 
+              href={proyecto.linkDemo} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-xs text-brand-blue hover:underline font-medium"
+            >
+              Demo en vivo
+            </a>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

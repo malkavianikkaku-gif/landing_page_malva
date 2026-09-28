@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0a0b13;
+  --color-brand-card: #131024;
+  --color-brand-purple: #8b5cf6;
+  --color-brand-red: #ef4444;
+  --color-brand-blue: #3b82f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080911;
+  color: #ffffff;
+
+}
+
+/* Efecto de resplandor sutil para contenedores principales */
+.glow-purple {
+  background: rgba(10, 11, 22, 0.85); /* Un poco más oscuro para que resalte el neón exterior */
+  backdrop-filter: blur(12px);
+    
+    /* Borde neón más definido para dar ilusión de luz sólida */
+  border: 1px solid rgba(139, 92, 246, 0.6); 
+  border-radius: 16px;
+    
+    /* Box shadow: Incrementamos a 40px de radio y 8px de expansión */
+  box-shadow: 0 0 40px 8px rgba(139, 92, 246, 0.45);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+  
+  /* Efecto hover interactivo sobrepotenciado */
+.glow-purple:hover {
+  border-color: rgba(139, 92, 246, 0.9);
+  box-shadow: 0 0 60px 15px rgba(139, 92, 246, 0.6);
+  transform: translateY(-2px); /* Pequeño levante cyberpunk */
+}
