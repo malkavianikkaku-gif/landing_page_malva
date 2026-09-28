@@ -58,3 +58,6 @@ Abre http://localhost:4321 en tu navegador para ver el resultado en vivo.
 │   └── styles/          # Estilos globales CSS e integración con Tailwind
 └── package.json
 ---
+👤 Desarrollado por Malvavysco
+https://github.com/malkavianikkaku-gif
+© 2026 Malvavysco. Todos los derechos reservados.
